@@ -1,36 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdbool.h>
 
-int main(void)
+int main(int argc, char const *argv[])
 {
     srand(time(NULL));
-    int rng = (rand() % 80) + 1;
-    if (rng <= 10)
+    int gna = rand()%80 + 1;
+    if (gna <= 10)
     {
         printf("1");
     }
-   if (rng <= 20 && rng > 10)
+    if (gna <= 20 && gna > 10)
     {
         printf("2");
     }
-    if (rng <= 30 && rng > 20)
+    if (gna <= 30 && gna > 20)
     {
         printf("3");
     }
-    if (rng <= 40 && rng > 30)
+    if (gna <= 40 && gna > 30)
     {
         printf("4");
     }
-    if (rng <= 50 && rng > 40)
+    if (gna <= 50 && gna > 40)
     {
         printf("5");
     }
-    if (rng <= 50 && rng > 80)
+    if (gna <= 80 && gna > 50)
     {
-        printf("6");
+        printf ("6");
     }
-      
     return 0;
 }

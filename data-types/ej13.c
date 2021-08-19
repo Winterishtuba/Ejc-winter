@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,11 +8,14 @@ int main(int argc, char const *argv[])
     int y = atoi(argv[2]);
     int z = atoi(argv[3]);
 
-    if ((x < y && y < z ) || (z < y && y < x))
+    if ((x > y && y > z) || (x < y && y < z))
     {
-        printf("True");
-        exit(0);
+        printf("verdadero\n");
+        return 0;
     }
-    printf("false");
+    else{
+        printf("falso\n");
+        return 0;
+    }
     return 0;
 }
